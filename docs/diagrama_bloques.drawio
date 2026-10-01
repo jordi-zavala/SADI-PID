@@ -723,17 +723,32 @@
         <mxCell id="WQVRKkCDpjVvILAiULvZ-145" edge="1" parent="WQVRKkCDpjVvILAiULvZ-132" source="WQVRKkCDpjVvILAiULvZ-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WQVRKkCDpjVvILAiULvZ-139">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="Di3Xd14FHQOK4AjwfueP-12" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-145" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Sube&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1644" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-134" parent="WQVRKkCDpjVvILAiULvZ-132" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Calefactor&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="60" as="geometry" />
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-146" edge="1" parent="WQVRKkCDpjVvILAiULvZ-132" source="WQVRKkCDpjVvILAiULvZ-135" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WQVRKkCDpjVvILAiULvZ-140">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+        <mxCell id="Di3Xd14FHQOK4AjwfueP-13" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-146" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Baja&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.181" y="-1" as="geometry">
+            <mxPoint y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-135" parent="WQVRKkCDpjVvILAiULvZ-132" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Calefactor&lt;/div&gt;" vertex="1">
           <mxGeometry height="30" width="60" x="30" y="90" as="geometry" />
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-150" edge="1" parent="WQVRKkCDpjVvILAiULvZ-132" source="WQVRKkCDpjVvILAiULvZ-137" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WQVRKkCDpjVvILAiULvZ-147">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Di3Xd14FHQOK4AjwfueP-15" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-150" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Baja&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.1852" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-137" parent="WQVRKkCDpjVvILAiULvZ-132" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Humidificador" vertex="1">
           <mxGeometry height="30" width="90" x="15" y="150" as="geometry" />
@@ -752,6 +767,11 @@
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-149" edge="1" parent="WQVRKkCDpjVvILAiULvZ-132" source="WQVRKkCDpjVvILAiULvZ-148" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WQVRKkCDpjVvILAiULvZ-141">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Di3Xd14FHQOK4AjwfueP-14" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-149" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;Sube&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.2606" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-148" parent="WQVRKkCDpjVvILAiULvZ-132" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Humidificador" vertex="1">
           <mxGeometry height="30" width="90" x="15" y="120" as="geometry" />
