@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Página-1" id="qNjyxPFQ7n0ECfaUEvsp">
-    <mxGraphModel dx="2068" dy="806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="1878" dy="685" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -634,7 +634,7 @@
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-156" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-155" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" value="&lt;font&gt;-&lt;/font&gt;" vertex="1">
           <mxGeometry relative="1" x="0.7897" y="1" as="geometry">
-            <mxPoint x="19" y="3" as="offset" />
+            <mxPoint x="19" y="23" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-104" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Sensor&lt;/div&gt;&lt;div&gt;(Temperatura)&lt;/div&gt;" vertex="1">
@@ -682,7 +682,7 @@
         <mxCell id="WQVRKkCDpjVvILAiULvZ-120" edge="1" parent="1" source="WQVRKkCDpjVvILAiULvZ-121" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="WQVRKkCDpjVvILAiULvZ-108">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="WQVRKkCDpjVvILAiULvZ-123" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-120" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;" value="-" vertex="1">
+        <mxCell id="WQVRKkCDpjVvILAiULvZ-123" connectable="0" parent="WQVRKkCDpjVvILAiULvZ-120" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=16;fontFamily=Helvetica;" value="-" vertex="1">
           <mxGeometry relative="1" x="0.8397" as="geometry">
             <mxPoint x="20" y="-14" as="offset" />
           </mxGeometry>
