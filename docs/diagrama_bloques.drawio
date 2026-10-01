@@ -717,8 +717,8 @@
         <mxCell id="WQVRKkCDpjVvILAiULvZ-132" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
           <mxGeometry height="200" width="241.5" x="760" y="460" as="geometry" />
         </mxCell>
-        <mxCell id="WQVRKkCDpjVvILAiULvZ-133" parent="WQVRKkCDpjVvILAiULvZ-132" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Planta&lt;/div&gt;&lt;div&gt;(Incubadora)&lt;/div&gt;" vertex="1">
-          <mxGeometry height="30" width="60" x="90.75" y="10" as="geometry" />
+        <mxCell id="WQVRKkCDpjVvILAiULvZ-133" parent="WQVRKkCDpjVvILAiULvZ-132" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Planta&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;(Incubadora)&lt;/font&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="90" x="75.75" y="20" as="geometry" />
         </mxCell>
         <mxCell id="WQVRKkCDpjVvILAiULvZ-145" edge="1" parent="WQVRKkCDpjVvILAiULvZ-132" source="WQVRKkCDpjVvILAiULvZ-134" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="WQVRKkCDpjVvILAiULvZ-139">
           <mxGeometry relative="1" as="geometry" />
