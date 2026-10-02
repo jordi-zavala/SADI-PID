@@ -2,7 +2,7 @@
 
 ## Objetivo General
 
-Diseñar e implementar un sistema mecatrónico de control climático para una incubadora utilizando un microcontrolador ESP32. El sistema regula dinámicamente la temperatura y la humedad relativa internas mediante actuadores de calefacción y humidificación, garantizando condiciones ambientales estables y controladas para el desarrollo biológico, rechazando perturbaciones térmicas y de carga mediante una arquitectura de control multivariable en lazo cerrado.
+Diseñar e implementar un sistema de control digital en lazo cerrado para regular la temperatura y la humedad relativa dentro de una incubadora, utilizando un microcontrolador ESP32 como controlador central, con el fin de mantener condiciones ambientales estables y rechazar perturbaciones externas.
 
 ## Arquitectura de Control (Estrategia)
 
