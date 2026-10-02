@@ -1,4 +1,4 @@
-# Título del Proyecto: Sistema de Control Digital en Lazo Cerrado para Regulación de Temperatura y Humedad en Incubadora
+# Título del Proyecto: Sistema Adaptativo de Incubación para el Control Digital de Temperatura y Humedad Relativa (SADI)
 
 ## Objetivo General
 
