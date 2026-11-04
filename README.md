@@ -33,7 +33,7 @@ A diferencia de los enfoques convencionales de lazo abierto que simplemente apli
 
 El proyecto *SADI (Sistema Adaptativo de Incubación para el Control Digital de Temperatura y Humedad Relativa)* se concibe como una solución integral que reemplaza la conmutación manual por un lazo cerrado de control digital. Su objetivo fundamental es regular de manera autónoma el microclima de una cámara de incubación, rechazando perturbaciones externas (tales como la pérdida repentina de calor por la apertura de compuertas) y estabilizando la planta térmica. El sistema fue diseñado con una meta de precisión estacionaria de ±1°C para la variable de temperatura y de ±10% para la humedad relativa.
 
-![Diagrama de bloques para el control del sistema SADI.](img/diagrama_bloques_sadi.webp)
+![alt text](image.png)
 
 Físicamente, el prototipo es una planta multivariable que integra:
 
