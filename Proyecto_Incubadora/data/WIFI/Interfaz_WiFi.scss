@@ -1,0 +1,291 @@
+// ============================================================
+// VARIABLES
+// ============================================================
+$bg-body: #0f172a;
+$bg-panel: #1e293b;
+$bg-card: #0f172a;
+$bg-input: #1e293b;
+$text-main: #e2e8f0;
+$text-muted: #94a3b8;
+$text-soft: #64748b;
+$accent: #38bdf8;
+$accent-green: #34d399;
+$danger: #ef4444;
+$success: #22c55e;
+$warning: #f59e0b;
+$border: #1e293b;
+$border-input: #334155;
+$radius-lg: 24px;
+$radius-md: 16px;
+$radius-sm: 12px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    background: $bg-body;
+    color: $text-main;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.phone{
+    width: 100%;
+    max-width: 380px;
+    background: $bg-panel;
+    border-radius: $radius-lg;
+    padding: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,.4);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+
+    h1{
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: $accent;
+        letter-spacing: .5px;
+    }
+}
+
+.status{
+    background: $danger;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: .72rem;
+    font-weight: 600;
+
+    &.ok{
+        background: $success;
+    }
+
+    &.wait{
+        background: $warning;
+    }
+}
+
+.welcome{
+    background: $bg-body;
+    border-left: 4px solid $accent;
+    border-radius: $radius-md;
+    padding: 16px;
+    margin-bottom: 14px;
+
+    h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $accent;
+        margin-bottom: 8px;
+        line-height: 1.3;
+    }
+
+    p{
+        font-size: .8rem;
+        color: $text-muted;
+        line-height: 1.5;
+
+        strong{
+            color: $text-main;
+        }
+    }
+}
+
+.info-box{
+    background: $bg-card;
+    border-radius: $radius-md;
+    padding: 14px;
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: space-between;
+    align-items: center;
+
+    .left{
+        font-size: .88rem;
+        color: $text-muted;
+    }
+    .estado-texto{
+        margin-top: 4px;
+        font-size: .78rem;
+        color: $accent;
+        font-weight: 600;
+    }
+    .total{
+        font-size: 1.35rem;
+        font-weight: 700;
+        color: $accent;
+    }
+}
+    .cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .card{
+        background: $bg-card;
+        border-radius: 14px;
+        padding: 12px  6px;
+        text-align: center;
+
+        .number{
+            font-size: 1rem;
+            font-weight: 700;
+            color: $accent;
+            margin-bottom: 2px;
+
+            &.small{
+                font-size: .95rem;
+                color: $accent-green;
+            }
+        }
+        .label{
+            font-size: .9rem;
+            color: $text-muted;
+        }
+    }
+
+    .panel{
+        background: $bg-card;
+        border-radius: $radius-md;
+        padding: 14px;
+        margin-bottom: 14px;
+        border: 1px solid $border;
+    }
+
+    .panel-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: .85rem;
+        font-weight: 600;
+        color: $accent;
+        margin-bottom: 12px;
+
+        .badge{
+            background: $border-input;
+            color: $text-muted;
+            padding: 2px 8px;
+            border-radius: $radius-sm;
+            font-size: .72rem;
+            font-weight: 600;
+        }
+    }
+label.campo{
+    display: block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: $text-muted;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+select, input[type=password], input[type=text]{
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 10px;
+    border: 1px solid $border-input;
+    background: $bg-input;
+    color: $text-main;
+    font-size: .85rem;
+    margin-bottom: 12px;
+    outline: none;
+
+    &:focus{
+        border-color: $accent;
+    }
+}
+
+.fila-pass{
+    position: relative;
+}
+
+.ver-pass{
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background: none;
+    border: none;
+    color: $text-soft;
+    font-size: .7rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.btn-wp{
+    width: 100%;
+    border: none;
+    padding: 12px;
+    border-radius: $radius-sm;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: .15s;
+
+    &.add{
+        background: #0284c7;
+        color: #fff;
+        margin-bottom: 8px;
+    }
+
+    &.ghost{
+        background: $border-input;
+        color: $text-main;
+    }
+
+    &:active{
+        transform: scale(.8);
+        opacity: .9;
+    }
+
+    &:disabled{
+        background: #475569;
+        opacity: .7;
+    }
+}
+
+.features{
+    background: $bg-card;
+    border-radius: $radius-md;
+    padding: 14px;
+    margin-bottom: 14px;
+
+    h3{
+        font-size: .85rem;
+        font-weight: 600;
+        color: $accent;
+        margin-bottom: 10px;
+    }
+}
+
+.feature{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 8px 0;
+    border-bottom: 1px solid $border;
+
+    &:last-child{
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .ico{
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}

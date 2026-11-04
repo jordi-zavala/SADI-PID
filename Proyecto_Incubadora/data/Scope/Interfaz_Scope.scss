@@ -1,0 +1,216 @@
+//Variables de colores:
+$bg: #0f172a;
+$panel:         #1e293b;
+$border:        #334155;
+$border-hover:  #475569;
+$text:          #e2e8f0;
+$muted:         #94a3b8;
+$accent:        #38bdf8;
+$accent-dark:   #0284c7;
+$accent-light:  #0ea5e9;
+$green:         #34d399;
+$yellow:        #fbbf24;
+$pink:          #f472b6;
+$red:           #ef4444;
+$canvas-bg:     #060b14;
+$grid:          #1e293b;
+$grid-label:    #475569;
+$Orange: #FFA500;
+
+$radius-lg:     16px;
+$radius-md:     12px;
+$radius-sm:     10px;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: $bg;
+    color: $text;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.app{
+    width: 100%;
+    max-width:  1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: $panel;
+    border-radius: $radius-lg;
+    h1{
+        font-size: 1.1rem;
+        color: $accent;
+        letter-spacing: .5px;
+    }
+}
+
+.status{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .8rem;
+    color: $muted;
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: $red;
+    transition: .2s;
+}
+
+.toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px 12px;
+    background: $panel;
+    border-radius: $radius-md;
+    align-items: center;
+}
+
+.ch{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: $bg;
+    font-size: .78rem;
+    cursor: pointer;
+    user-select: none;
+    border: 1px solid $border;
+    transition: .15s;
+
+    &:hover{
+        border-color: $accent;
+    }
+    &.off{
+        opacity: .35;
+    }
+}
+
+.ch-swatch{
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+
+    &[data-color="sp"] {
+        background: $yellow;
+    }
+    &[data-color="pv"] {
+        background: $accent;
+    }
+    &[data-color="pv2"] {
+        background: $Orange;
+    }
+    &[data-color="err"] {
+        background: $red;
+    }
+    &[data-color="ctrl"] {
+        background: $green;
+    }
+}
+
+.spacer{
+    flex: 1;
+}
+
+//Configuracion del comportamiento y estetica de los botones.
+.btn{
+    padding: 8px 14px;
+    border-radius: $radius-sm;
+    border: none;
+    background: $border;
+    color: $text;
+    font-size: .78rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .15s;
+
+    &:hover{
+        background: $border-hover;
+    }
+
+    &:active{
+        transform: scale(.8);
+    }
+    &.primary{
+        background: $accent-dark;
+    &:hover{
+        background: $accent-light;
+    }
+    }
+}
+
+.scope-wrap {
+    background: $panel;
+    border-radius: $radius-lg;
+    padding: 12px;
+    position: relative;
+}
+
+canvas{
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    background: $canvas-bg;
+}
+
+//Ajustes del texto en el interior del bloque donde se visualiza el scope.
+.overlay{
+    position: absolute;
+    inset: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #060B14;
+    border-radius: 8px;
+    font-size: .9rem;
+    color: $muted;
+    pointer-events: none;
+    transition: opacity .3s;
+
+    &.hidden{
+        opacity: 0;
+    }
+}
+
+.stat{
+    background: $panel;
+    border-radius: $radius-md;
+    padding: 10px 14px;
+
+    .label{
+        font-size: .7rem;
+        color: $muted;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        margin-bottom: 4px;
+    }
+//Zona de ajuste de colores de la parte de datos numericos del sistema.
+    .value{
+        font-size: 1.15rem;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+    }
+    &.sp .value{ color: $yellow;}
+    &.pv .value{color: $accent;}
+    &.err .value{color: $red;}
+    &.ctrl .value{color: $green;}
+}

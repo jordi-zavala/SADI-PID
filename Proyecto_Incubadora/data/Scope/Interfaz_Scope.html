@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.A.D.I · Scope</title>
+  <link rel="stylesheet" href="/data/Scope/Interfaz_Scope.css">
+</head>
+<body>
+  <div class="app">
+
+    <header>
+      <h1>Proyecto S.A.D.I · Scope</h1>
+      <div class="status">
+        <span class="dot" id="dot"></span>
+        <span id="statusText">Desconectado</span>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="ch" data-ch="0">
+        <span class="ch-swatch" data-color="sp"></span>Setpoint
+      </div>
+      <div class="ch" data-ch="1">
+        <span class="ch-swatch" data-color="pv"></span>Temperatura
+      </div>
+            <div class="ch" data-ch="4">
+        <span class="ch-swatch" data-color="pv2"></span>Humedad
+      </div>
+      <div class="ch" data-ch="2">
+        <span class="ch-swatch" data-color="err"></span>Error
+      </div>
+      <div class="ch off" data-ch="3">
+        <span class="ch-swatch" data-color="ctrl"></span>Salida PID
+      </div>
+
+
+      <div class="spacer"></div>
+
+      <button class="btn" id="btnPause">Pausar</button>
+      <button class="btn" id="btnClear">Limpiar</button>
+      <button class="btn primary" id="btnConnect">Conectar</button>
+    </div>
+
+    <!-- ===== CANVAS ===== -->
+    <div class="scope-wrap">
+      <canvas id="scope"></canvas>
+      <div class="overlay" id="overlay">Sin conexión — presiona Conectar</div>
+    </div>
+
+    <!-- ===== STATS ===== -->
+    <div class="stats">
+      <div class="stat sp">
+        <div class="label">Setpoint</div>
+        <div class="value" id="valSP">—</div>
+      </div>
+      <div class="stat pv">
+        <div class="label">Temperatura</div>
+        <div class="value" id="valPV">—</div>
+      </div>
+      <div class="stat err">
+        <div class="label">Error</div>
+        <div class="value" id="valErr">—</div>
+      </div>
+      <div class="stat ctrl">
+        <div class="label">Salida PID</div>
+        <div class="value" id="valCtrl">—</div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="/data/Scope/Interfaz_Scope.js"></script>
+</body>
+</html>

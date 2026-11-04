@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>S.A.D.I · Conexión WiFi</title>
+    <link rel="stylesheet" href="/data/WIFI/Interfaz_WiFi.css" />
+  </head>
+  <body>
+    <div class="Pantallas">
+    <div id="Pantalladehojas" class="plant-screen">
+        <div class="soil-backdrop"></div>
+        <div class="floating-garden">
+            <div class="plant plant-monstera plant-1" style="top: 12%; left: 8%;">
+                <div class="stem"></div>
+                <div class="leaf m-leaf1"></div>
+                <div class="leaf m-leaf2"></div>
+                <div class="leaf m-leaf3"></div>
+                <div class="leaf m-leaf4"></div>
+            </div>
+            <div class="plant plant-succulent plant-2" style="top: 65%; left: 72%;">
+                <div class="stem"></div>
+                <div class="rounded-leaf s-leaf1"></div>
+                <div class="rounded-leaf s-leaf2"></div>
+                <div class="rounded-leaf s-leaf3"></div>
+                <div class="rounded-leaf s-leaf4"></div>
+                <div class="rounded-leaf s-leaf5"></div>
+            </div>
+            <div class="plant plant-fern plant-3" style="top: 35%; left: 75%;">
+                <div class="stem"></div>
+                <div class="leaf f-leaf1"></div>
+                <div class="leaf f-leaf2"></div>
+                <div class="leaf f-leaf3"></div>
+                <div class="leaf f-leaf4"></div>
+            </div>
+            <div class="plant plant-broad plant-4" style="top: 78%; left: 15%;">
+                <div class="stem"></div>
+                <div class="leaf b-leaf1"></div>
+                <div class="leaf b-leaf2"></div>
+                <div class="leaf b-leaf3"></div>
+            </div>
+            <div class="plant plant-monstera plant-5" style="top: 45%; left: 5%; transform: scale(0.85);">
+                <div class="stem"></div>
+                <div class="leaf m-leaf1"></div>
+                <div class="leaf m-leaf2"></div>
+                <div class="leaf m-leaf3"></div>
+            </div>
+            <div class="plant plant-succulent plant-6" style="top: 20%; left: 82%; transform: scale(0.7);">
+                <div class="stem"></div>
+                <div class="rounded-leaf s-leaf1"></div>
+                <div class="rounded-leaf s-leaf2"></div>
+                <div class="rounded-leaf s-leaf3"></div>
+                <div class="rounded-leaf s-leaf4"></div>
+            </div>
+            <div class="particle" style="width: 5px; height: 5px; top: 18%; left: 30%; animation-duration: 14s;"></div>
+            <div class="particle" style="width: 7px; height: 7px; top: 55%; left: 45%; animation-duration: 19s;"></div>
+            <div class="particle" style="width: 4px; height: 4px; top: 72%; left: 60%; animation-duration: 12s;"></div>
+            <div class="particle" style="width: 6px; height: 6px; top: 30%; left: 85%; animation-duration: 17s;"></div>
+            <div class="particle" style="width: 5px; height: 5px; top: 82%; left: 22%; animation-duration: 15s;"></div>
+        </div>
+        <div class="logo-container">
+            <img class="logo-img" id="dynamicLogo" src="/logo.webp" alt="Logo" width="110" height="110">
+        </div>
+        <div id="loadingMsg" class="loading-overlay">Inicializando ecosistema... 5s</div>
+    </div>
+    
+    <div class="phone">
+      <div class="header">
+        <h1>S.A.D.I</h1>
+        <div class="status wait" id="status">SIN CONEXIÓN</div>
+      </div>
+
+      <div class="welcome">
+        <h2>Bienvenido al sistema incubador S.A.D.I</h2>
+        <p>
+          Sistema de incubación de <strong>Control digital</strong> basado en
+          visión artificial, odometría y navegación por GPS.
+        </p>
+        <p style="margin-top: 8px">
+          Para comenzar, selecciona la red WiFi a la que se conectará al sistema
+          incubador.
+        </p>
+      </div>
+
+      <div class="info-box">
+        <div class="left">
+          <div>Paso: <strong>1 de 2</strong></div>
+          <div class="estado-texto" id="estadoModo">
+            Modo configuración (AP)
+          </div>
+        </div>
+        <div class="total">WiFi</div>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="number" id="estadoRed">--</div>
+          <div class="label">Red</div>
+        </div>
+        <div class="card">
+          <div class="number small" id="numRedes">0</div>
+          <div class="label">Redes</div>
+        </div>
+        <div class="card">
+          <div class="number small" id="modoAP">AP</div>
+          <div class="label">Modo</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          Red WiFi
+          <span class="badge">ESP32-S3</span>
+        </div>
+
+        <form id="configForm">
+          <label class="campo" for="ssid">Red disponible</label>
+          <select id="ssid" required>
+            <option value="">Buscando redes...</option>
+          </select>
+
+          <label class="campo" for="password">Contraseña</label>
+          <div class="fila-pass">
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+            <button type="button" class="ver-pass" id="verPass">VER</button>
+          </div>
+
+          <button type="submit" class="btn-wp add" id="btnGuardar">
+            Guardar y conectar
+          </button>
+          <button type="button" class="btn-wp ghost" id="btnEscanear">
+            Volver a escanear
+          </button>
+        </form>
+      </div>
+
+      <div class="features">
+        <h3>¿Qué hace el sistema S.A.D.I?</h3>
+
+        <div class="feature">
+          <div class="ico">🌡️</div>
+          <div class="txt">
+            <strong>Monitoreo de condiciones</strong>
+            Permite realizar un seguimiento de la temperatura y humedad
+            presentes dentro de la incubadora.
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="ico">👁️</div>
+          <div class="txt">
+            <strong>Notificaciónes constantes</strong>
+            Permite obtener seguimiento de las variables de
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="ico">📍</div>
+          <div class="txt">
+            <strong>Navegación por waypoints</strong>
+            GPS + brújula/giroscopio para trazar rutas de punto a punto y
+            regresar al origen.
+          </div>
+        </div>
+
+        <div class="feature">
+          <div class="ico">⚠️</div>
+          <div class="txt">
+            <strong>Aviso de fallas.</strong>
+            Si el sistema presenta fallas durante la ejecución del sistema
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== LOG ===== -->
+      <div class="log" id="log">
+        Conéctate a la red <strong>ESP32_Config</strong> y selecciona tu WiFi de
+        trabajo.
+      </div>
+
+      <div class="footnote">
+        S.A.D.I · Instituto Tecnológico de Culiacán · Control Digital
+      </div>
+    </div>
+
+    <script src="/data/WIFI/Interfaz_WiFi.js"></script>
+  </body>
+</html>

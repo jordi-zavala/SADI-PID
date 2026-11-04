@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px;
+}
+
+.phone {
+  width: 100%;
+  max-width: 380px;
+  background: #1e293b;
+  border-radius: 24px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.header h1 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+
+.status {
+  background: #ef4444;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+.status.ok {
+  background: #22c55e;
+}
+.status.wait {
+  background: #f59e0b;
+}
+
+.welcome {
+  background: #0f172a;
+  border-left: 4px solid #38bdf8;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.welcome h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.welcome p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+.welcome p strong {
+  color: #e2e8f0;
+}
+
+.info-box {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  margin-bottom: 14px;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-box .left {
+  font-size: 0.88rem;
+  color: #94a3b8;
+}
+.info-box .estado-texto {
+  margin-top: 4px;
+  font-size: 0.78rem;
+  color: #38bdf8;
+  font-weight: 600;
+}
+.info-box .total {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.card {
+  background: #0f172a;
+  border-radius: 14px;
+  padding: 12px 6px;
+  text-align: center;
+}
+.card .number {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 2px;
+}
+.card .number.small {
+  font-size: 0.95rem;
+  color: #34d399;
+}
+.card .label {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.panel {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  border: 1px solid #1e293b;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 12px;
+}
+.panel-header .badge {
+  background: #334155;
+  color: #94a3b8;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+label.campo {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+  margin-top: 6px;
+  font-weight: 600;
+}
+
+select, input[type=password], input[type=text] {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #e2e8f0;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  outline: none;
+}
+select:focus, input[type=password]:focus, input[type=text]:focus {
+  border-color: #38bdf8;
+}
+
+.fila-pass {
+  position: relative;
+}
+
+.ver-pass {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.btn-wp {
+  width: 100%;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.btn-wp.add {
+  background: #0284c7;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.btn-wp.ghost {
+  background: #334155;
+  color: #e2e8f0;
+}
+.btn-wp:active {
+  transform: scale(0.8);
+  opacity: 0.9;
+}
+.btn-wp:disabled {
+  background: #475569;
+  opacity: 0.7;
+}
+
+.features {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.features h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.feature {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #1e293b;
+}
+.feature:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.feature .ico {
+  font-size: 1rem;
+  line-height: 1.2;
+}/*# sourceMappingURL=Interfaz_WiFi.css.map */
