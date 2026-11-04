@@ -28,3 +28,20 @@ El proyecto se fundamenta en un esquema de control multivariable (MIMO 2×2) que
 ## Justificación Técnica (El valor del Control Digital)
 
 A diferencia de los enfoques convencionales de lazo abierto que simplemente aplican una tabla de valores fijos (temperatura vs. porcentaje de PWM), este diseño rechaza activamente las perturbaciones internas y externas de la planta. El controlador compensa variables como la caída de tensión en la fuente de alimentación, la pérdida de calor por apertura de puerta y el retardo térmico del sistema, asegurando que la temperatura y la humedad reales alcancen y mantengan la referencia calculada de forma rápida, estable y segura. La naturaleza multivariable del sistema exige además gestionar el acoplamiento entre ambos lazos, lo que añade un nivel de complejidad y rigor propio de un proyecto de control digital avanzado.
+
+## Descripción general del prototipo SADI.
+
+El proyecto *SADI (Sistema Adaptativo de Incubación para el Control Digital de Temperatura y Humedad Relativa)* se concibe como una solución integral que reemplaza la conmutación manual por un lazo cerrado de control digital. Su objetivo fundamental es regular de manera autónoma el microclima de una cámara de incubación, rechazando perturbaciones externas (tales como la pérdida repentina de calor por la apertura de compuertas) y estabilizando la planta térmica. El sistema fue diseñado con una meta de precisión estacionaria de ±1°C para la variable de temperatura y de ±10% para la humedad relativa.
+
+![Diagrama de bloques para el control del sistema SADI.](img/diagrama_bloques_sadi.webp)
+
+Físicamente, el prototipo es una planta multivariable que integra:
+
+- **Elementos de actuación:** Un foco halógeno resistivo como fuente térmica principal y un módulo ultrasónico sumergible para la inyección de humedad. Ambos elementos están apoyados por un ventilador axial de corriente continua encargado de generar convección forzada para homogeneizar el volumen de aire.
+- **Sistema de instrumentación:** La retroalimentación de la planta se obtiene en tiempo real mediante un sensor digital DHT22, el cual monitorea las condiciones térmicas e higrométricas del ambiente interno.
+
+## Arquitectura de control digital.
+
+Para cumplir con los requerimientos dinámicos del sistema, la lógica de control recae sobre un microcontrolador ESP32-S3. Este dispositivo actúa como la unidad de procesamiento central, encargado de ejecutar los algoritmos PID discretizados a un periodo de muestreo ($T_s$) constante @astrom_pid.
+
+La arquitectura electrónica incluye una etapa de potencia basada en un módulo puente H de dos salidas. Esta configuración permite al controlador aislar las corrientes de demanda operativa y enviar señales de control moduladas por ancho de pulso (PWM). De esta manera, el algoritmo PID calcula el esfuerzo de control en tiempo real (basándose en la magnitud, la acumulación y la tasa de cambio del error) y la etapa de potencia traduce ese valor matemático en una modulación proporcional de la energía eléctrica entregada al foco calefactor y al humidificador ultrasónico.
