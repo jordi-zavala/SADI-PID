@@ -1,0 +1,6 @@
+{
+    "clangd.arguments": [
+        "--compile-commands-dir=c:/Users/Jordi/workspace/projects/SADI-PID/Proyecto_Incubadora/.cache/clangd",
+        "--query-driver=C:/Users/Jordi/.platformio/packages/toolchain-*/bin/*,C:/Users/Jordi/.platformio/packages/tool-*/bin/*"
+    ]
+}
