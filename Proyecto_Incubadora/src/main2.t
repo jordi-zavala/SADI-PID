@@ -45,7 +45,7 @@ String Password_Wifi_Guardado = "";
 constexpr int FREQ = 15000, RESOLUTION = 8;
 constexpr int CH_RPWM = 0, CH_LPWM = 1;
 
-float Feed_Forward_Temperatura, Feed_Forward_Humedad, Setpoint, Temperatura_Ambiental;
+float Feed_Forward_Temperatura, Feed_Forward_Humedad, Setpoint=37.5, Temperatura_Ambiental;
 
 float aoT1 = 1 - exp(-Tiempo_de_Muestreo / Tiempo_de_Subida_Sistema), a1T1 = 0, a2T1 = 0;
 float b0T1 = 0, b1T1 = 0, b2T1 = 0, b3T1 = 0;
@@ -78,17 +78,17 @@ float Y0_PID_Humedad[4] = {0, 0, 0, 0};
 // Configuración de los tiempos del sistema.
 constexpr double Tiempo_Maximo_Ejecucion = 1.2e3, Tiempo_de_Muestreo = 2;
 
-constexpr double Tiempo_de_Subida_Sistema_Temperatura = 150.0,
-                 Tiempo_de_Retardo_Sistema_Temperatura = 4.2,
+constexpr double Tiempo_de_Subida_Sistema_Temperatura = 172.0,
+                 Tiempo_de_Retardo_Sistema_Temperatura = 4,
                  Tiempo_de_Subida_Sensor_Temperatura = 26.38,
-                 Tiempo_de_Retardo_Sensor_Temperatura = 5.0;
+                 Tiempo_de_Retardo_Sensor_Temperatura = 4.2;
 
 constexpr double Tiempo_de_Subida_Sistema_Humedad = 100.0,
                  Tiempo_de_Retardo_Sistema_Humedad = 4.2,
                  Tiempo_de_Subida_Sensor_Humedad = 26.38,
                  Tiempo_de_Retardo_Sensor_Humedad = 5.0;
 
-constexpr double K_Temperatura = 30.0,
+constexpr double K_Temperatura = 68.50,
                  K_Humedad = 40, 
                  Setpoint_Temperatura = 37.5,
                  Setpoint_Humedad=60;
