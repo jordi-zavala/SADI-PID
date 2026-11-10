@@ -17,7 +17,7 @@ const int freq = 1000;      // 1 kHz
 const int resolucion = 12;  // 12 bits (0 a 4095)
 
 // Potencia del escalón (2048 = 50%, 4095 = 100%)
-const int potencias_escalon = 3071; 
+const int potencias_escalon = 2048; 
 
 // Control de tiempos
 unsigned long tiempo_inicio;
