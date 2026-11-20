@@ -20,8 +20,8 @@
 #define Sensor_DHT22_Ambiental 43
 #define Calentador_Temperatura 15
 #define Sistema_Dosificador_de_Humedad 16
-#define PIN_LPWM = 16
-#define PIN_ENC_B = 26
+#define PIN_LPWM 16
+#define PIN_ENC_B 26
 
 bool WiFi_Conectado = false;
 
@@ -64,14 +64,18 @@ float b0T1 = 0, b1T1 = 0, b2T1 = 0, b3T1 = 0;
 float a0_H1[] = {aoH1, a1H1, a2H1};
 float b0_H1[] = {b0H1, b1H1, b2H1, b3H1};
 
+//Matrices de valores para el almacenamiento de la variables de la función de transferencia discreta
 float X0_Temperatura[4] = {0, 0, 0, 0};
 float Y0_Temperatura[4] = {0, 0, 0, 0};
 
 float X0_Humedad[4] = {0, 0, 0, 0};
 float Y0_Humedad[4] = {0, 0, 0, 0};
 
+//Función de transferencia discreta PID - Temperatura
 float X0_PID_Temperatura[4] = {0, 0, 0, 0};
 float Y0_PID_Temperatura[4] = {0, 0, 0, 0};
+
+//Función de transferencia discreta PID - Humedad
 float X0_PID_Humedad[4] = {0, 0, 0, 0};
 float Y0_PID_Humedad[4] = {0, 0, 0, 0};
 
@@ -142,6 +146,10 @@ void Controlar_Foco(int pwmIzq, int pwmDer, int dirIzq, int dirDer, int velocida
   }
 }
 
+void Configuracion_Del_Scope(){
+  
+}
+
 void Lectura_de_sensores(void *)
 {
   TickType_t Ultimo = xTaskGetTickCount();
@@ -171,6 +179,8 @@ void FeedForward()
   portENTER_CRITICAL(&muxSensors);
   Temperatura_Ambiental = point
       // Aqui se realizara la recuperación de los parametros del proceso.
+      //La detección del feedforward en la ecuación estatica pertenece a la lectura en tiempo...
+      //Real del sensor DHT22 para estar a la par de la lectura.
       Feed_Forward_Temperatura = .3 * (Setpoint - 25) / K_Temperatura;
   Feed_Forward_Humedad = .3 * (Setpoint - 25) / K_Humedad;
 }
@@ -178,23 +188,25 @@ void FeedForward()
 void Calculo_Temperatura()
 {
   // Calculo del sistema de temperatura en ecuaciones de diferencias.
-  Y0_Temperatura[0] = X0_Temperatura[0] * a0_H1[0] - X0_Temperatura[1] * (Kpd + 2 * Kdd) + X0_Temperatura[2] * Kdd + Y0_Temperatura[1];
+  Y0_Temperatura[0] = Y0_Temperatura[1] * a0_T1[0] - X0_Temperatura[1]*b0_T1[0];
   for (int i = 3; i > 0; i--)
   {
     X0_Temperatura[i] = X0_Temperatura[i - 1];
     Y0_Temperatura[i] = Y0_Temperatura[i - 1];
   }
-  Configuracion_PID(tiem)
+  //Configuracion_PID(tiemp)
 }
 void Calculo_Humedad()
 {
-  Y0_Humedad[0] = X0_Humedad[0] * (Kpd + Kid + Kdd) - X0_Humedad[1] * (Kpd + 2 * Kdd) + X0_Humedad[2] * Kdd + Y0_T1[1];
+  Y0_Humedad[0] = X0_Humedad[1]* a0_H1[0] - Y0_Humedad[1]*b0_H1[0];
+
   for (int i = 3; i > 0; i--)
   {
     X0_Humedad[i] = X0_Humedad[i - 1];
     Y0_Humedad[i] = Y0_Humedad[i - 1];
   }
 }
+
 
 void Calculo_PID_Temperatura()
 {
