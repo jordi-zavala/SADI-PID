@@ -23,8 +23,8 @@ Densidad uniforme asumida: $rho = 7850.0 "kg/m"^3 = 7.8500 times 10^(-6) "kg/mm"
 #outline(title: "Contenido", indent: auto)
 #pagebreak()
 
-= Metodología y formulación
-
+== Metodología y formulación
+#pagebreak()
 == Volumen
 $ V = integral.triple_Omega dif V $
 
@@ -43,7 +43,7 @@ Respecto al centro de gravedad $G$ (teorema de Steiner / ejes paralelos):
 $ I_(x x)^(G) = I_(x x)^(O) - m(bar(y)^2 + bar(z)^2), quad I_(y y)^(G) = I_(y y)^(O) - m(bar(x)^2 + bar(z)^2), quad I_(z z)^(G) = I_(z z)^(O) - m(bar(x)^2 + bar(y)^2) $
 $ I_(x y)^(G) = I_(x y)^(O) + m bar(x) bar(y), quad I_(x z)^(G) = I_(x z)^(O) + m bar(x) bar(z), quad I_(y z)^(G) = I_(y z)^(O) + m bar(y) bar(z) $
 
-= Resultados
+== Resultados
 
 == Archivo 1: `Linkage_Bolt.step`
 
