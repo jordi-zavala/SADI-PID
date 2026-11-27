@@ -120,9 +120,6 @@ void loop()
       
       Controlar_Calentador_BTS7960(Salida_Calentador);
       Controlar_Humedificador_L298N(Salida_Humedad);
-    } else {
-      Controlar_Calentador_BTS7960(0);
-      Controlar_Humedificador_L298N(0);
     }
   }
 
