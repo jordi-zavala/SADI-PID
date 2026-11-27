@@ -9,7 +9,6 @@ String Password_Wifi_Guardado = "";
 
 // Configuración Puente H
 constexpr int FREQ = 15000, RESOLUTION = 8;
-constexpr int CH_RPWM = 0, CH_LPWM = 1, CH_HUMEDAD = 3;
 
 float Feed_Forward_Temperatura, Feed_Forward_Humedad, Setpoint = 37.5, Setpoint_Humedad = 60.0, Temperatura_Ambiental;
 
